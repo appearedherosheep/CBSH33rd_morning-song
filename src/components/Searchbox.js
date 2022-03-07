@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import Searchresult from "./Searchresult";
+import Searchresult from "./SearchResult";
 
 import qs from "qs";
 import axios from "axios";
@@ -14,19 +14,14 @@ let searchResult, title, artist, musicList;
 
 function showMusicData(data) {
   searchResult = data["results"]["trackmatches"]["track"];
-  // console.log(searchResult);
   title = searchResult.map((x) => x["name"]);
-  // console.log(title);
   artist = searchResult.map((x) => x["artist"]);
-  // console.log(artist);
   musicList = title.map(function (x, i) {
     return x.concat(" - ", artist[i]);
   });
+  console.log(searchResult);
 
-  // console.log(musicList);
   return musicList;
-  // return [title,artist];
-  // return searchResult;
 }
 
 function searchLastFM(query) {
@@ -92,7 +87,6 @@ export default function Searchbox() {
         </IconButton>
       </Paper>
       <Searchresult list={musicList} />
-      {/* <Searchresult title={musicList[0]} artist={musicList[1]} /> */}
 
     </div>
   );
