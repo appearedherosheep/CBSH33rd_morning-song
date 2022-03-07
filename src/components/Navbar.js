@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 // }
 
 // export default Navbar;
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./Navbar.css";
 import { MenuItems } from "./MenuItems";
 
