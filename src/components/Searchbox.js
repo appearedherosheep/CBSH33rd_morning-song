@@ -1,60 +1,32 @@
-// import React from "react";
-// import { TextField, Button, IconButton } from "@mui/material";
-// import SearchIcon from "@mui/icons-material/Search";
-
-// function Searchbox() {
-//   return (
-//     <div>
-//       <TextField
-//         variant="outlined"
-//         size="normal"
-//         label="노래 제목 / 가수를 입력하세요"
-//       >
-//         <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
-//           <SearchIcon />
-//         </IconButton>
-//       </TextField>
-
-//       <Button>검색</Button>
-//     </div>
-//   );
-// }
-
-// export default Searchbox;
-
-// import * as React from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Searchresult from "./Searchresult";
 
 import qs from "qs";
 import axios from "axios";
-// import moment from 'moment'
 
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
-// import Divider from "@mui/material/Divider";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import DirectionsIcon from "@mui/icons-material/Directions";
 
 let searchResult, title, artist, musicList;
 
 function showMusicData(data) {
   searchResult = data["results"]["trackmatches"]["track"];
-  console.log(searchResult);
+  // console.log(searchResult);
   title = searchResult.map((x) => x["name"]);
-  console.log(title);
+  // console.log(title);
   artist = searchResult.map((x) => x["artist"]);
-  console.log(artist);
+  // console.log(artist);
   musicList = title.map(function (x, i) {
     return x.concat(" - ", artist[i]);
   });
 
-  console.log(musicList);
+  // console.log(musicList);
   return musicList;
   // return [title,artist];
+  // return searchResult;
 }
 
 function searchLastFM(query) {
@@ -108,7 +80,6 @@ export default function Searchbox() {
         <InputBase
           sx={{ ml: 1, flex: 1 }}
           placeholder="노래 제목 / 가수를 입력하세요"
-          // inputProps={{ "aria-label": "search google maps" }}
           onChange={onChange}
           disabled={isSearchDisabled}
         />
@@ -116,12 +87,13 @@ export default function Searchbox() {
           type="submit"
           sx={{ p: "10px" }}
           disabled={isSearchDisabled}
-          //  aria-label="search"
         >
           <SearchIcon />
         </IconButton>
       </Paper>
       <Searchresult list={musicList} />
+      {/* <Searchresult title={musicList[0]} artist={musicList[1]} /> */}
+
     </div>
   );
 }
