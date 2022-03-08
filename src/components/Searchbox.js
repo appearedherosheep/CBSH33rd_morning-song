@@ -57,16 +57,16 @@ export default function Searchbox() {
       searchLastFM(searchQuery).then((data) => {
         setMusicList(showMusicData(data));
         console.log(musicList);
-        setStateSearch(1);
+        setStateSearch(0);
         if (musicList.length == 0) {
-          setStateSearch(0);
+          setStateSearch(1);
         }
         setSearchDisabled(false);
       });
     } else {
       console.log("내용 입력");
       setSearchDisabled(false);
-      setStateSearch(0);
+      setStateSearch(1);
     }
   };
 
