@@ -17,31 +17,88 @@ ul {
     margin: 0;
     
 } */
-
 .list {
   /* padding: 7px 10px; */
+
+  background-color: #e7ebf0 !important;
+  /* background-color: black !important; */
+
   padding-top: 5px;
   display: flex;
-  width: 400px;
+  width: 430px;
   height: 600px;
   /* border-top-left-radius: 0; */
   /* border-top-right-radius: 0; */
   margin-top: 20px;
+  /* margin-left: 10px; */
   justify-content: center;
+  box-shadow: none !important;
 }
+.list-blank {
+  /* padding-border-style: dotted !important; */
+  /* background-color: black; */
+  border-style: dashed;
+  border-color: #bbbfc3;
+  border-width: 1px;
+  border-radius: 4px;
+  width: 380px;
+  /* justify-content: center; */
+  text-align: center;
+  /* display: table-cell; */
+  line-height: 600px;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: #bbbfc3; 
+  /* display: flex; */
+}
+.list-blank__hide {
+  display: none !important;
+}
+/* .list-blank>span {
+  margin-top: 300px;
+  /* margin-bottom: auto; */
+/* background-color: black; */
+/*} */
+
 .list-item {
-    padding: 5px 5px;
-    display: block;
-    line-height: 1.5;
-    font-weight: 400;
-    cursor: pointer;
-    width: 400px;
-    height: 40px;
-    border-radius: 4px;
+  padding: 5px 5px;
+  display: block;
+  line-height: 1.5;
+  font-weight: 500;
+  cursor: pointer;
+  width: 400px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: white;
+  margin-bottom: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
-/* .list-item:hover {
-    background-color: #e3eefa;
-} */
+.list-item:hover {
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+  width: 450px;
+  height: 50px;
+
+  font-weight: 600;
+  font-size: 18px;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .active {
-    background-color: #e3eefa;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+  width: 450px;
+  height: 50px;
+
+  font-weight: 600;
+  font-size: 18px;
+
+  margin-left: 0;
+  margin-right: 0;
 }

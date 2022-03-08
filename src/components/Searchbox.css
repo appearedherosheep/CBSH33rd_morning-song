@@ -1,0 +1,8 @@
+.searchbox {
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  /* margin: 0 !important; */
+  margin-left: 15px;
+}

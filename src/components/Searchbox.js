@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Searchresult from "./SearchResult";
+import "./Searchbox.css";
 
 import qs from "qs";
 import axios from "axios";
@@ -70,7 +71,8 @@ export default function Searchbox() {
       <Paper
         onSubmit={onSubmit}
         component="form"
-        sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400 }}
+        className="searchbox"
+        // sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400,margin: 0 }}
       >
         <InputBase
           sx={{ ml: 1, flex: 1 }}

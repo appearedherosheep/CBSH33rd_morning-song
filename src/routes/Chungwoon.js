@@ -5,7 +5,7 @@ function Chungwoon() {
   return (
     <div className="container">
       <Searchbox />
-      <List />
+      {/* <List /> */}
     </div>
   );
 }
