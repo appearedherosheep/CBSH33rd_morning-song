@@ -13,7 +13,6 @@ function App() {
       <header>
         <Navbar />
       </header>
-      {/* <div className="wrapper"> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -21,7 +20,6 @@ function App() {
         <Route path="/sarum" element={<Sarum />}></Route>
       </Routes>
       <hr />
-      {/* </div> */}
 
       <Footer />
     </Router>

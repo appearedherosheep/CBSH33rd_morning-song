@@ -19,7 +19,6 @@ function showMusicData(data) {
   musicList = title.map(function (x, i) {
     return x.concat(" - ", artist[i]);
   });
-  // console.log(musicList);
 
   return musicList;
 }
@@ -45,7 +44,6 @@ export default function Searchbox() {
   const [musicList, setMusicList] = useState([]);
 
   const [stateSearch, setStateSearch] = useState(0);
-  // console.log(stateSearch);
 
   const onChange = (event) => setSearchQuery(event.target.value);
 
@@ -62,12 +60,8 @@ export default function Searchbox() {
         setStateSearch(1);
         if (musicList.length == 0) {
           setStateSearch(0);
-        } 
-        // else {
-        //   setStateSearch(1);
-        // }
+        }
         setSearchDisabled(false);
-        // console.log(stateSearch);
       });
     } else {
       console.log("내용 입력");
@@ -78,12 +72,7 @@ export default function Searchbox() {
 
   return (
     <div>
-      <Paper
-        onSubmit={onSubmit}
-        component="form"
-        className="searchbox"
-        // sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400,margin: 0 }}
-      >
+      <Paper onSubmit={onSubmit} component="form" className="searchbox">
         <InputBase
           sx={{ ml: 1, flex: 1 }}
           placeholder="노래 제목 / 가수를 입력하세요"

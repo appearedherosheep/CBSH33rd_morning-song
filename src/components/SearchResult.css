@@ -1,67 +1,36 @@
-/* li {
-  list-style: none;
-  margin: 10px 10px;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: left;
-} */
-
 ul {
   margin: 0;
   padding: 0;
   align-items: none;
 }
-/* h1 {
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-    
-} */
 .list {
-  /* padding: 7px 10px; */
-
   background-color: #e7ebf0 !important;
-  /* background-color: black !important; */
 
   padding-top: 5px;
   display: flex;
   width: 430px;
-  height: 600px;
-  /* border-top-left-radius: 0; */
-  /* border-top-right-radius: 0; */
   margin-top: 20px;
-  /* margin-left: 10px; */
   justify-content: center;
   box-shadow: none !important;
 }
 .list-blank {
-  /* padding-border-style: dotted !important; */
-  /* background-color: black; */
   border-style: dashed;
   border-color: #bbbfc3;
   border-width: 1px;
   border-radius: 4px;
   width: 380px;
-  /* justify-content: center; */
   text-align: center;
-  /* display: table-cell; */
   line-height: 600px;
   -ms-user-select: none;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  color: #bbbfc3; 
-  /* display: flex; */
+  color: #bbbfc3;
 }
 .list-blank__hide {
   display: none !important;
 }
-/* .list-blank>span {
-  margin-top: 300px;
-  /* margin-bottom: auto; */
-/* background-color: black; */
-/*} */
 
 .list-item {
   padding: 5px 5px;
