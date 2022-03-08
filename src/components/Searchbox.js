@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
 import Searchresult from "./SearchResult";
 import "./Searchbox.css";
 
@@ -20,7 +19,7 @@ function showMusicData(data) {
   musicList = title.map(function (x, i) {
     return x.concat(" - ", artist[i]);
   });
-  console.log(searchResult);
+  // console.log(musicList);
 
   return musicList;
 }
@@ -45,6 +44,9 @@ export default function Searchbox() {
   const [searchQuery, setSearchQuery] = useState("");
   const [musicList, setMusicList] = useState([]);
 
+  const [stateSearch, setStateSearch] = useState(0);
+  // console.log(stateSearch);
+
   const onChange = (event) => setSearchQuery(event.target.value);
 
   function onSubmit(event) {
@@ -57,12 +59,20 @@ export default function Searchbox() {
       searchLastFM(searchQuery).then((data) => {
         setMusicList(showMusicData(data));
         console.log(musicList);
+        setStateSearch(1);
+        if (musicList.length == 0) {
+          setStateSearch(0);
+        } 
+        // else {
+        //   setStateSearch(1);
+        // }
         setSearchDisabled(false);
+        // console.log(stateSearch);
       });
     } else {
-      toast.error("검색할 내용을 입력해주세요");
       console.log("내용 입력");
       setSearchDisabled(false);
+      setStateSearch(0);
     }
   };
 
@@ -88,8 +98,7 @@ export default function Searchbox() {
           <SearchIcon />
         </IconButton>
       </Paper>
-      <Searchresult list={musicList} />
-
+      <Searchresult list={musicList} stateSearch={stateSearch} />
     </div>
   );
 }
