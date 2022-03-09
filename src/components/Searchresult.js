@@ -4,11 +4,12 @@ import "./SearchResult.css";
 
 export default function Searchresult(props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  console.log(props.stateSearch);
+  // console.log(props.stateSearch);
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
   };
+  
   return (
     <Paper className="list">
       <div

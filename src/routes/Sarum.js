@@ -1,6 +1,10 @@
+import Searchbox from "../components/Searchbox";
+import "./Sarum.css";
 function Sarum() {
   return (
-      <h1>this is Sarum route</h1>
+    <div className="sarum-container">
+      <Searchbox />{" "}
+    </div>
   );
 }
 
